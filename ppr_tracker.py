@@ -148,6 +148,13 @@ def register_print(code: str, by: str | None = None, note: str | None = None) ->
 def cmd_attach(args: argparse.Namespace) -> int:
     reg = load_registry()
     code = canon(args.code)
+    if args.location is None:
+        print(
+            "error: location required — pass it positionally "
+            "(attach PR01 G3) or with --location (attach PR01 --location G3).",
+            file=sys.stderr,
+        )
+        return 1
     loc = canon_location(args.location)
     if code not in reg:
         print(f"error: {code} was never minted.", file=sys.stderr)
@@ -461,7 +468,11 @@ def main(argv: list[str] | None = None) -> int:
     p = sub.add_parser("attach", help="record where a unit sits: G1..G3 or a "
                                       "head like G1H2")
     p.add_argument("code", help="serial, e.g. PR01")
-    p.add_argument("location", help="G1, G2, G3, or a specific head like G1H2")
+    p.add_argument("location", nargs="?", default=None,
+                   help="G1, G2, G3, or a specific head like G1H2 "
+                        "(or pass --location instead)")
+    p.add_argument("--location", dest="location", metavar="LOCATION",
+                   help="alternative to the positional LOCATION")
     p.add_argument("--by", help="who attached it")
     p.set_defaults(func=cmd_attach)
 
