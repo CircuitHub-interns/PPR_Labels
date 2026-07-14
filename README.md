@@ -51,6 +51,7 @@ python ppr_tracker.py list
 # Unit installed — record where it sits (gantry, or a specific head)
 python ppr_tracker.py attach PR01 G1 --by "JOA"
 python ppr_tracker.py attach PR01 G1H2 --by "JOA"
+python ppr_tracker.py attach PR01 --location G1H2 --by "JOA"   # --location works too
 
 # Already attached elsewhere? attach refuses — detach first
 python ppr_tracker.py detach PR01
