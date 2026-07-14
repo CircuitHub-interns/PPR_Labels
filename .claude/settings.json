@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(python -c \"import ppr_labels as p; from pathlib import Path; s = Path\\(r'C:\\\\Users\\\\efren\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\c--Users-efren-OneDrive-Desktop-Cross---Study-Work-Related-Circuit-Hub-Projects-PPR-Labels\\\\d0badd01-b875-4d13-9b87-0f9a5e9d814a\\\\scratchpad'\\); s.mkdir\\(parents=True, exist_ok=True\\); \\(s/'PR01_vertical.svg'\\).write_text\\(p.label_svg\\('PR01', True\\), encoding='utf-8'\\); p.label_pdf\\('PR01', s/'PR01_vertical.pdf', True\\); print\\('ok'\\)\")"
+    ]
+  }
+}

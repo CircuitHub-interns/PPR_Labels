@@ -1,0 +1,72 @@
+{
+  "PR01": {
+    "attached_at": "2026-07-13T09:41:03",
+    "attached_by": null,
+    "location": "G1",
+    "minted_at": "2026-07-13T09:40:04",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR02": {
+    "attached_at": "2026-07-13T09:41:08",
+    "attached_by": null,
+    "location": "G1",
+    "minted_at": "2026-07-13T09:40:05",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR03": {
+    "attached_at": "2026-07-13T09:41:18",
+    "attached_by": null,
+    "location": "G2",
+    "minted_at": "2026-07-13T09:40:06",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR04": {
+    "attached_at": "2026-07-13T09:41:20",
+    "attached_by": null,
+    "location": "G2",
+    "minted_at": "2026-07-13T09:39:13",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR05": {
+    "attached_at": "2026-07-13T09:41:26",
+    "attached_by": null,
+    "location": "G2",
+    "minted_at": "2026-07-13T09:40:06",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR06": {
+    "attached_at": "2026-07-13T09:41:29",
+    "attached_by": null,
+    "location": "G2",
+    "minted_at": "2026-07-13T09:40:09",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  },
+  "PR07": {
+    "attached_at": null,
+    "attached_by": null,
+    "location": null,
+    "minted_at": "2026-07-13T09:40:09",
+    "minted_by": "JOA",
+    "note": null,
+    "reprints": 0,
+    "retired_at": null
+  }
+}
