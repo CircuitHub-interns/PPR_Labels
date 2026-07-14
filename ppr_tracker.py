@@ -36,8 +36,8 @@ Usage:
   python ppr_tracker.py retire PR03 --note "force sensor drift"
   python ppr_tracker.py unretire PR03                  # undo a mistake
   python ppr_tracker.py delete PR03 PR04               # erase bad labels entirely
-  python ppr_tracker.py report                         # copy-paste summary
-  python ppr_tracker.py report --md report.md          # also write a markdown table
+  python ppr_tracker.py report                         # copy-paste summary + refreshes report.md
+  python ppr_tracker.py report --md other.md           # write the markdown table elsewhere instead
 
 retire vs delete: retire closes a real unit's validity range and keeps its
 history; delete is for labels that should never have existed ("bad PPR
@@ -441,17 +441,16 @@ def cmd_report(args: argparse.Namespace) -> int:
             lines.append(detail)
     print("\n".join(lines))
 
-    if args.md:
-        md = [f"# PPR fleet update - {today}", ""]
-        md.append("| Serial | Minted | By | Reprints | Status | Location | "
-                   "Attached By | Note |")
-        md.append("|---|---|---|---|---|---|---|---|")
-        for r in _rows(reg):
-            md.append("| " + " | ".join(cell or " " for cell in r) + " |")
-        md.append("")
-        md.append(f"**{len(active)} active** of {len(reg)} minted.")
-        Path(args.md).write_text("\n".join(md) + "\n", encoding="utf-8")
-        print(f"\nwrote {args.md}")
+    md = [f"# PPR fleet update - {today}", ""]
+    md.append("| Serial | Minted | By | Reprints | Status | Location | "
+               "Attached By | Note |")
+    md.append("|---|---|---|---|---|---|---|---|")
+    for r in _rows(reg):
+        md.append("| " + " | ".join(cell or " " for cell in r) + " |")
+    md.append("")
+    md.append(f"**{len(active)} active** of {len(reg)} minted.")
+    Path(args.md).write_text("\n".join(md) + "\n", encoding="utf-8")
+    print(f"\nwrote {args.md}")
     return 0
 
 
@@ -524,7 +523,10 @@ def main(argv: list[str] | None = None) -> int:
     p.set_defaults(func=cmd_list)
 
     p = sub.add_parser("report", help="print a supervisor-ready summary")
-    p.add_argument("--md", metavar="FILE", help="also write a markdown table")
+    p.add_argument(
+        "--md", metavar="FILE", default="report.md",
+        help="markdown file to (re)write every run (default: report.md)",
+    )
     p.set_defaults(func=cmd_report)
 
     args = parser.parse_args(argv)
