@@ -60,9 +60,9 @@
     "retired_at": null
   },
   "PR07": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:30:04",
+    "attached_by": "Nathan",
+    "location": "G1",
     "minted_at": "2026-07-13T09:40:09",
     "minted_by": "JOA",
     "note": null,
@@ -70,9 +70,9 @@
     "retired_at": null
   },
   "PR08": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:30:19",
+    "attached_by": "Nathan",
+    "location": "G1",
     "minted_at": "2026-07-14T10:27:43",
     "minted_by": null,
     "note": null,
@@ -80,9 +80,9 @@
     "retired_at": null
   },
   "PR09": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:40:18",
+    "attached_by": "Nathan",
+    "location": "G2",
     "minted_at": "2026-07-14T10:27:44",
     "minted_by": null,
     "note": null,
@@ -90,9 +90,9 @@
     "retired_at": null
   },
   "PR10": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:40:28",
+    "attached_by": "Nathan",
+    "location": "G2",
     "minted_at": "2026-07-14T10:27:45",
     "minted_by": null,
     "note": null,
@@ -100,9 +100,9 @@
     "retired_at": null
   },
   "PR11": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:40:31",
+    "attached_by": "Nathan",
+    "location": "G2",
     "minted_at": "2026-07-14T10:27:46",
     "minted_by": null,
     "note": null,
@@ -110,9 +110,9 @@
     "retired_at": null
   },
   "PR12": {
-    "attached_at": null,
-    "attached_by": null,
-    "location": null,
+    "attached_at": "2026-07-14T13:40:35",
+    "attached_by": "Nathan",
+    "location": "G2",
     "minted_at": "2026-07-14T10:27:47",
     "minted_by": null,
     "note": null,
